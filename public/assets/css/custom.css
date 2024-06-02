@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+}
+
+.heading-auth {
+    font-family: "Inter", sans-serif;
+    font-size: 96px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(225, 143, 19, 1);
+}
+
+.heading-nav {
+    font-family: "Inter", sans-serif;
+    font-size: 36px !important;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(225, 143, 19, 1) !important;
+}
+
+.heading-home {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(225, 143, 19, 1) !important;
+}
