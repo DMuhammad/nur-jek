@@ -84,11 +84,19 @@
                             @foreach ($drivers as $driver)
                                 <div class="col-4 mb-3">
                                     <div class="card">
-                                        <img src="{{ asset('assets/img/kucing.jpg') }}" class="card-img-top" alt="kucing">
+                                        <img src="{{ asset('assets/img/' . $driver->image . '.jpg') }}" class="card-img-top"
+                                            alt="kucing">
                                         <div class="card-body">
                                             <h5 class="card-title"> {{ $driver->name }} </h5>
+                                            <div class="mb-2">
+                                                <i class="bi bi-star-fill text-warning text-lg"></i>
+                                                <span>
+                                                    {{ number_format($driver->rating / $driver->order, 1) }} dari
+                                                    {{ $driver->order }} order
+                                                </span>
+                                            </div>
                                             <a class="btn btn-secondary btn-next"
-                                                onclick="return selectDriver('{{ $driver->name }}', {{ $driver->id }})">
+                                                onclick="return selectDriver('{{ $driver->name }}', {{ $driver->id }}, '{{ $driver->image }}')">
                                                 I CHOOSE YOU
                                             </a>
                                         </div>
@@ -107,9 +115,9 @@
                     <fieldset class="mb-5">
                         <input type="hidden" name="driver_id" id="driver_id">
                         <div style="width: 18rem;" class="mx-auto mb-3">
-                            <img src="{{ asset('assets/img/kucing.jpg') }}" class="card-img-top" alt="kucing">
+                            <img id="driver_image" src="" class="card-img-top" alt="kucing">
                             <div class="text-center">
-                                <h3 id="driver_name">RONI</h3>
+                                <h3 id="driver_name"></h3>
                                 <div class="form-group row">
                                     <div class="col">
                                         <div class="rate d-flex flex-row-reverse justify-center">

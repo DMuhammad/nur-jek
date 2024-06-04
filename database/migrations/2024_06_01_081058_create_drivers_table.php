@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->integer('order');
             $table->integer('rating');
+            $table->string('image');
             $table->timestamps();
         });
     }

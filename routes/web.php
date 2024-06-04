@@ -34,6 +34,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/order', [DriverController::class, 'index'])->name('order');
     Route::get('/history/{user}', [OrderHistoryController::class, 'index'])->name('history');
     Route::get('/profile/{user}', [UserController::class, 'show'])->name('profile');
+    Route::put('/profile/{user}', [UserController::class, 'update'])->name('profile.update');
+    Route::delete('/profile/{user}', [UserController::class, 'destroy'])->name('profile.delete');
 
     Route::post('order', [OrderHistoryController::class, 'store'])->name('order.store');
 });

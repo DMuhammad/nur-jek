@@ -29,7 +29,8 @@
                 <div class="card border-light mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{ asset('assets/img/kucing.jpg') }}" class="img-fluid rounded" alt="...">
+                            <img src="{{ asset('assets/img/' . $order->driver->image . '.jpg') }}"
+                                class="img-fluid rounded">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

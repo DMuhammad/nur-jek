@@ -12,6 +12,7 @@ class Driver extends Model
     protected $fillable = [
         'name',
         'order',
-        'rating'
+        'rating',
+        'image'
     ];
 }
